@@ -1,0 +1,90 @@
+/* Basic styling for the game */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#gameCanvas {
+    border: 3px solid #333;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 50%, #98FB98 100%);
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.controls button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.controls button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pauseBtn {
+    background: #ff9800;
+}
+
+#pauseBtn:hover {
+    background: #e68900;
+}
+
+#resetBtn {
+    background: #f44336;
+}
+
+#resetBtn:hover {
+    background: #da190b;
+}
+
+.score {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#scoreValue {
+    color: #4CAF50;
+}
