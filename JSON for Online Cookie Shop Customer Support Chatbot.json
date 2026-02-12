@@ -1,0 +1,68 @@
+{
+  "useCaseName": "Online Cookie Shop Customer Support Chatbot",
+  "systemType": "Text-based conversational AI",
+  "primaryFunction": "Answer customer questions, help with orders, and provide basic shopping assistance",
+  "contextOfUse": {
+    "industry": "Online retail / food e-commerce",
+    "environment": "Customer-facing, public"
+  },
+  "stakeholders": {
+    "primaryUsers": ["Online customers"],
+    "indirectlyAffectedParties": ["Customer service staff", "Order fulfillment team"],
+    "oversightOwners": ["Store management", "Customer support supervisors"]
+  },
+  "decisionsAndActions": {
+    "decisionsMadeBySystem": [
+      "Determines what the customer is asking about",
+      "Decides whether it can answer the question or escalate to a human"
+    ],
+    "actionsExecutedAutomatically": [
+      "Answers questions about cookie flavors, prices, and delivery times",
+      "Provides order status information"
+    ],
+    "actionsRequiringHumanApproval": [
+      "Handling complaints",
+      "Processing payments, refunds, or order cancellations"
+    ]
+  },
+  "dataInputs": {
+    "dataTypesUsed": ["Text messages from customers"],
+    "dataSources": ["Website chat interface", "Order management system"],
+    "personalOrSensitiveData": true
+  },
+  "modelAutonomyLevel": "Recommendation with human decision",
+  "scaleAndReach": {
+    "expectedNumberOfUsers": "Hundreds to thousands per day",
+    "frequencyOfUse": "Daily",
+    "geographicScope": "Regional or national, depending on delivery areas"
+  },
+  "errorHandlingAndEscalation": {
+    "howErrorsAreDetected": [
+      "The system does not understand the user’s question",
+      "Complaints from customers related to the chatbot"
+    ],
+    "whenHumansAreInvolved": [
+      "When a customer asks for help the bot cannot provide",
+      "When an issue involves payment or complaints"
+    ],
+    "fallbackBehaviour": [
+      "Transfer the chat to a human customer service agent"
+    ]
+  },
+  "constraintsAndControls": {
+    "legalOrPolicyConstraints": [
+      "Consumer protection laws",
+      "Food labeling and allergy disclosure requirements",
+      "Privacy policies for customer data"
+    ],
+    "monitoringAndAuditMechanisms": [
+      "Chat conversation logs",
+      "Regular review of customer feedback and bot performance"
+    ]
+  },
+  "enums": {
+    "systemType": ["Text-based conversational AI", "Voice-based conversational AI", "Decision support AI", "Agent assist AI"],
+    "environment": ["Internal", "Customer-facing", "Public"],
+    "modelAutonomyLevel": ["Informational only", "Recommendation with human decision", "Action execution with human override", "Fully autonomous action"]
+  }
+}

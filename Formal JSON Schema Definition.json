@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Use Case Schema",
+  "type": "object",
+  "required": ["useCaseName", "systemType", "contextOfUse", "modelAutonomyLevel"],
+  "properties": {
+    "useCaseName": {
+      "type": "string",
+      "description": "The name of the specific AI implementation."
+    },
+    "systemType": {
+      "type": "string",
+      "enum": [
+        "Text-based conversational AI",
+        "Voice-based conversational AI",
+        "Decision support AI",
+        "Agent assist AI"
+      ]
+    },
+    "primaryFunction": { "type": "string" },
+    "contextOfUse": {
+      "type": "object",
+      "properties": {
+        "industry": { "type": "string" },
+        "environment": {
+          "type": "string",
+          "enum": ["Internal", "Customer-facing", "Public"]
+        }
+      }
+    },
+    "stakeholders": {
+      "type": "object",
+      "properties": {
+        "primaryUsers": { "type": "array", "items": { "type": "string" } },
+        "indirectlyAffectedParties": { "type": "array", "items": { "type": "string" } },
+        "oversightOwners": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "decisionsAndActions": {
+      "type": "object",
+      "properties": {
+        "decisionsMadeBySystem": { "type": "array", "items": { "type": "string" } },
+        "actionsExecutedAutomatically": { "type": "array", "items": { "type": "string" } },
+        "actionsRequiringHumanApproval": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "dataInputs": {
+      "type": "object",
+      "properties": {
+        "dataTypesUsed": { "type": "array", "items": { "type": "string" } },
+        "dataSources": { "type": "array", "items": { "type": "string" } },
+        "personalOrSensitiveData": { "type": "boolean" }
+      }
+    },
+    "modelAutonomyLevel": {
+      "type": "string",
+      "enum": [
+        "Informational only",
+        "Recommendation with human decision",
+        "Action execution with human override",
+        "Fully autonomous action"
+      ]
+    },
+    "scaleAndReach": {
+      "type": "object",
+      "properties": {
+        "expectedNumberOfUsers": { "type": "string" },
+        "frequencyOfUse": { "type": "string" },
+        "geographicScope": { "type": "string" }
+      }
+    }
+  }
+}

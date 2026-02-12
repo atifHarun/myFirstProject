@@ -1,0 +1,64 @@
+{
+  "useCaseName": "General Hospital Patient Navigator",
+  "systemType": "Text-based conversational AI",
+  "primaryFunction": "Symptom checking, appointment scheduling, and patient portal navigation",
+  "contextOfUse": {
+    "industry": "Healthcare / Medical Services",
+    "environment": "Customer-facing"
+  },
+  "stakeholders": {
+    "primaryUsers": ["New and existing patients", "Family caregivers"],
+    "indirectlyAffectedParties": ["Triage nurses", "Administrative scheduling staff"],
+    "oversightOwners": ["Chief Medical Information Officer", "Data Privacy Officer"]
+  },
+  "decisionsAndActions": {
+    "decisionsMadeBySystem": [
+      "Determines urgency of patient symptoms (Triage level)",
+      "Matches patient needs with appropriate medical departments"
+    ],
+    "actionsExecutedAutomatically": [
+      "Provides clinic hours and location details",
+      "Sends appointment confirmation links"
+    ],
+    "actionsRequiringHumanApproval": [
+      "Medical diagnosis or prescription advice",
+      "Emergency dispatch or critical clinical interventions"
+    ]
+  },
+  "dataInputs": {
+    "dataTypesUsed": ["Symptom descriptions", "Patient ID numbers", "Date of birth"],
+    "dataSources": ["Patient input via web-app", "Electronic Health Records (EHR) integration"],
+    "personalOrSensitiveData": true
+  },
+  "modelAutonomyLevel": "Recommendation with human decision",
+  "scaleAndReach": {
+    "expectedNumberOfUsers": "1,000+ daily patient interactions",
+    "frequencyOfUse": "24/7 Availability",
+    "geographicScope": "Local and regional patients"
+  },
+  "errorHandlingAndEscalation": {
+    "howErrorsAreDetected": [
+      "High symptom-severity keywords detected",
+      "User frustration or repeated clarification requests"
+    ],
+    "whenHumansAreInvolved": [
+      "Immediate escalation for potential emergency symptoms (Red flags)",
+      "Complex insurance or billing inquiries"
+    ],
+    "fallbackBehaviour": [
+      "Provide emergency contact numbers (911)",
+      "Offer immediate callback from a registered nurse"
+    ]
+  },
+  "constraintsAndControls": {
+    "legalOrPolicyConstraints": [
+      "HIPAA compliance (Data privacy)",
+      "GDPR (for international patients)",
+      "Medical Liability Disclaimers"
+    ],
+    "monitoringAndAuditMechanisms": [
+      "Clinical accuracy audits by medical staff",
+      "Encrypted logs of data access"
+    ]
+  }
+}

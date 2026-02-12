@@ -1,0 +1,64 @@
+{
+  "useCaseName": "School IT Helper",
+  "systemType": "Text-based conversational AI",
+  "primaryFunction": "Troubleshoot hardware issues, assist with LMS logins, and manage software installation requests",
+  "contextOfUse": {
+    "industry": "Education",
+    "environment": "Internal"
+  },
+  "stakeholders": {
+    "primaryUsers": ["Students", "Teachers", "Administrative Staff"],
+    "indirectlyAffectedParties": ["IT Department Technicians", "Parents"],
+    "oversightOwners": ["Director of Information Technology", "School Principal"]
+  },
+  "decisionsAndActions": {
+    "decisionsMadeBySystem": [
+      "Categorizes issues (Hardware, Software, Network, or Account)",
+      "Determines if an issue can be solved via self-service or needs a ticket"
+    ],
+    "actionsExecutedAutomatically": [
+      "Generates IT support tickets in Jira/ServiceNow",
+      "Provides links to knowledge base articles and tutorial videos"
+    ],
+    "actionsRequiringHumanApproval": [
+      "Hardware replacements or laptop loaner distribution",
+      "Network-wide permission changes or security overrides"
+    ]
+  },
+  "dataInputs": {
+    "dataTypesUsed": ["Student/Staff ID numbers", "Device serial numbers", "Problem descriptions"],
+    "dataSources": ["School Active Directory", "Asset Management Database"],
+    "personalOrSensitiveData": true
+  },
+  "modelAutonomyLevel": "Action execution with human override",
+  "scaleAndReach": {
+    "expectedNumberOfUsers": "2,000+ Students and Staff",
+    "frequencyOfUse": "High volume during start of semester and exam periods",
+    "geographicScope": "On-campus and remote learning users"
+  },
+  "errorHandlingAndEscalation": {
+    "howErrorsAreDetected": [
+      "System fails to resolve the user's technical error code",
+      "User reports 'urgent' or 'classroom down' status"
+    ],
+    "whenHumansAreInvolved": [
+      "Physical hardware damage (broken screens, liquid spills)",
+      "Complex network connectivity issues affecting entire classrooms"
+    ],
+    "fallbackBehaviour": [
+      "Create a high-priority support ticket",
+      "Provide the IT Helpdesk walk-in hours and physical location"
+    ]
+  },
+  "constraintsAndControls": {
+    "legalOrPolicyConstraints": [
+      "FERPA (Student privacy)",
+      "COPPA (Children's online privacy protection)",
+      "Acceptable Use Policy (AUP) enforcement"
+    ],
+    "monitoringAndAuditMechanisms": [
+      "Resolution rate tracking",
+      "Sentiment analysis on teacher/staff feedback"
+    ]
+  }
+}
