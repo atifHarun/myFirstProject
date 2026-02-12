@@ -1,0 +1,63 @@
+{
+  "useCaseName": "Voice-Activated Hotel In-Room Assistant",
+  "systemType": "Voice-based conversational AI",
+  "primaryFunction": "Control room environment, request housekeeping, and provide local tourism recommendations",
+  "contextOfUse": {
+    "industry": "Hospitality / Travel",
+    "environment": "Customer-facing"
+  },
+  "stakeholders": {
+    "primaryUsers": ["Hotel Guests"],
+    "indirectlyAffectedParties": ["Housekeeping staff", "Room service kitchen", "Maintenance team"],
+    "oversightOwners": ["Hotel General Manager", "IT Director"]
+  },
+  "decisionsAndActions": {
+    "decisionsMadeBySystem": [
+      "Interprets verbal intent (e.g., 'I'm cold' means 'Increase thermostat')",
+      "Prioritizes guest requests based on urgency (e.g., 'Toilet overflow' vs 'Need extra towels')"
+    ],
+    "actionsExecutedAutomatically": [
+      "Adjusts IoT smart room controls (lights, temperature, curtains)",
+      "Plays music or sets wake-up alarms"
+    ],
+    "actionsRequiringHumanApproval": [
+      "Charging room service orders to the guest's folio",
+      "Booking high-value spa appointments or external tours"
+    ]
+  },
+  "dataInputs": {
+    "dataTypesUsed": ["Audio streams (voice commands)", "Room occupancy status"],
+    "dataSources": ["In-room smart speaker microphones", "Property Management System (PMS)"],
+    "personalOrSensitiveData": true
+  },
+  "modelAutonomyLevel": "Action execution with human override",
+  "scaleAndReach": {
+    "expectedNumberOfUsers": "Check-ins across 500+ rooms daily",
+    "frequencyOfUse": "Intermittent (on-demand during stay)",
+    "geographicScope": "Individual hotel property"
+  },
+  "errorHandlingAndEscalation": {
+    "howErrorsAreDetected": [
+      "Speech-to-text confidence score falls below 60%",
+      "User says 'Stop' or 'Talk to a person'"
+    ],
+    "whenHumansAreInvolved": [
+      "When a guest reports a maintenance emergency",
+      "When voice commands fail to resolve a billing dispute"
+    ],
+    "fallbackBehaviour": [
+      "Place an automated voice call to the Front Desk on the guest's behalf",
+      "Visual prompt on the bedside tablet to type the request"
+    ]
+  },
+  "constraintsAndControls": {
+    "legalOrPolicyConstraints": [
+      "Privacy laws regarding audio recording (GDPR/CCPA)",
+      "Informed consent for data collection"
+    ],
+    "monitoringAndAuditMechanisms": [
+      "Anonymized transcript review",
+      "Hardware 'Mute' physical switch status monitoring"
+    ]
+  }
+}

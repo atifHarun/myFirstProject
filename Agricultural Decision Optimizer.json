@@ -1,0 +1,63 @@
+{
+  "useCaseName": "Agricultural Decision Optimizer",
+  "systemType": "Decision support AI",
+  "primaryFunction": "Analyze soil health and weather forecasts to recommend optimal crop rotation and planting schedules",
+  "contextOfUse": {
+    "industry": "Agriculture",
+    "environment": "Internal"
+  },
+  "stakeholders": {
+    "primaryUsers": ["Commercial farmers", "Agricultural consultants"],
+    "indirectlyAffectedParties": ["Seed suppliers", "Fertilizer distributors"],
+    "oversightOwners": ["Agronomy Department Head", "Data Science Lead"]
+  },
+  "decisionsAndActions": {
+    "decisionsMadeBySystem": [
+      "Calculates the probability of crop success based on historical rainfall",
+      "Identifies the most profitable crop based on current global market trends"
+    ],
+    "actionsExecutedAutomatically": [
+      "Generates weekly soil nutrition reports",
+      "Sends automated weather alerts to the user dashboard"
+    ],
+    "actionsRequiringHumanApproval": [
+      "Purchase of bulk seeds or fertilizers",
+      "Final selection of the seasonal planting map"
+    ]
+  },
+  "dataInputs": {
+    "dataTypesUsed": ["Soil pH levels", "Satellite imagery", "Historical weather patterns", "Commodity market prices"],
+    "dataSources": ["IoT soil sensors", "NASA/NOAA satellite data", "Public market APIs"],
+    "personalOrSensitiveData": false
+  },
+  "modelAutonomyLevel": "Informational only",
+  "scaleAndReach": {
+    "expectedNumberOfUsers": "Thousands of registered farms",
+    "frequencyOfUse": "Weekly (seasonal peaks)",
+    "geographicScope": "Continental / Multi-regional"
+  },
+  "errorHandlingAndEscalation": {
+    "howErrorsAreDetected": [
+      "Input data drift (e.g., sensor malfunction reporting 100°C soil)",
+      "Model confidence score below threshold for specific geographic zones"
+    ],
+    "whenHumansAreInvolved": [
+      "Validation of unusual recommendations by a certified agronomist",
+      "Technical troubleshooting of IoT sensor hardware"
+    ],
+    "fallbackBehaviour": [
+      "Display historical averages instead of AI predictions",
+      "Flag data points as 'Unverified' until manual review is complete"
+    ]
+  },
+  "constraintsAndControls": {
+    "legalOrPolicyConstraints": [
+      "Environmental protection regulations",
+      "Water usage rights and policies"
+    ],
+    "monitoringAndAuditMechanisms": [
+      "Comparison of predicted vs. actual harvest yields",
+      "External audit of algorithm bias for regional soil types"
+    ]
+  }
+}
